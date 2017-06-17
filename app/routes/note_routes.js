@@ -34,7 +34,7 @@ module.exports = function (app, db) {
       if(err){
         res.send({'error': 'An error has occurred'});
       } else {
-        res.send(JSON.stringify(items));
+        res.send(Object.assign({}, items));
       }
     });
   });
